@@ -7,6 +7,9 @@ physicsClient = p.connect(p.GUI)
 # disable the sidebars on the pybullet simulation
 p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
 
+# Tells pybullet to read in the world described in box.sdf
+p.loadSDF("box.sdf")
+
 # Slow down the simulation by iterating 1000 times
 for i in range(1000):
     p.stepSimulation()
