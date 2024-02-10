@@ -1,14 +1,12 @@
 import pybullet as p
+import pybullet_data
 import time
 
-
 physicsClient = p.connect(p.GUI)
+p.setAdditionalSearchPath(pybullet_data.getDataPath())
 
 # disable the sidebars on the pybullet simulation
-p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
-
-# Tells pybullet to read in the world described in box.sdf
-p.loadSDF("box.sdf")
+#p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
 
 # Slow down the simulation by iterating 1000 times
 for i in range(1000):
