@@ -9,8 +9,9 @@ p.setAdditionalSearchPath(pybullet_data.getDataPath())
 #p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
 
 p.setGravity(0,0,-9.8)
-planeId = p.loadURDF("plane.urdf")
-p.loadSDF("boxes.sdf")
+# Load the robot from body.urdf into an object called robotId
+robotId = p.loadURDF("body.urdf")
+p.loadSDF("world.sdf")
 # Slow down the simulation by iterating 1000 times
 for i in range(1000):
     p.stepSimulation()
