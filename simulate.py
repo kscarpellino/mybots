@@ -8,9 +8,6 @@ p.setAdditionalSearchPath(pybullet_data.getDataPath())
 # disable the sidebars on the pybullet simulation
 #p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
 
-p.setGravity(0,0,-9.8)
-planeId = p.loadURDF("plane.urdf")
-p.loadSDF("boxes.sdf")
 # Slow down the simulation by iterating 1000 times
 for i in range(1000):
     p.stepSimulation()
